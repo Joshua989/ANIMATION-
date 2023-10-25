@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Effects</title>
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: blueviolet;
+    }
+
+    .animated-element {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      background-color: orangered;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    .fade-in {
+      animation-name: fadeIn;
+    }
+
+    .slide-in {
+      animation-name: slideIn;
+    }
+
+    .bounce {
+      animation-name: bounce;
+    }
+
+    .rotate {
+      animation-name: rotate;
+    }
+
+    .zoom {
+      animation-name: zoom;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes zoom {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-element fade-in"></div>
+  <div class="animated-element slide-in"></div>
+  <div class="animated-element bounce"></div>
+  <div class="animated-element rotate"></div>
+  <div class="animated-element zoom"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* Styling the container to center the button */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Styling the interactive button */
+.interactive-button {
+  background-color: #3498db; /* Set the default background color to a shade of blue */
+  color: white; /* Set the text color to white */
+  font-size: 18px; /* Set the font size to 18 pixels */
+  padding: 10px 20px; /* Add padding around the button text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add rounded corners to the button */
+  cursor: pointer; /* Change cursor to pointer on hover for interaction */
+  transition: background-color 0.3s, transform 0.3s; /* Apply transitions to background color and transform properties */
+}
+
+/* Styling the button when hovered */
+.interactive-button:hover {
+  background-color: #2980b9; /* Darker shade of blue on hover */
+  transform: scale(1.1); /* Scale up the button by 10% on hover */
+  animation: moveRight 0.5s ease-in-out forwards; /* Apply the moveRight animation on hover */
+}
+
+/* Keyframes animation to move the button to the right */
+@keyframes moveRight {
+  0% {
+    transform: translateX(0); /* Initial position: no horizontal translation */
+  }
+  100% {
+    transform: translateX(50px); /* Final position: translate 50 pixels to the right */
+  }
+}
